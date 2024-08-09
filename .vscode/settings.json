@@ -1,3 +1,8 @@
 {
-  "editor.defaultFormatter": "biomejs.biome"
+  "editor.defaultFormatter": "biomejs.biome",
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#0B3515",
+    "titleBar.activeBackground": "#0F4A1E",
+    "titleBar.activeForeground": "#F4FDF6"
+  }
 }
