@@ -8,5 +8,7 @@ export default defineConfig({
 	site: 'https://astro-simple-portfolio.vercel.app/', // Required for sitemap -> Replace with your site's URL
 	output: 'hybrid',
 	integrations: [tailwind(), sitemap()],
-	adapter: vercel(),
+	adapter: vercel({
+		webAnalytics: { enabled: true },
+	}),
 });
