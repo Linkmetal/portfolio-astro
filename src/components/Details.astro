@@ -1,44 +1,14 @@
 ---
-
-enum DetailType {
-	title = 'title',
-	subtitle = 'subtitle',
-	description = 'description',
-}
-
-const details: {
-	type: DetailType;
-	content: string;
-}[] = [
-	{
-		type: DetailType.title,
-		content: `Hi, I'm Carlos Díaz aka Linkmetal`,
-	},
-	{
-		type: DetailType.subtitle,
-		content: 'Software Developer',
-	},
-	{
-		type: DetailType.description,
-		content: 'Specialized on Frontend 🚀💻',
-	},
-];
-
-const getClass = (type: DetailType) => {
-	switch (type) {
-		case DetailType.title:
-			return 'font-sora text-4xl text-center font-bold tracking-wide md:text-5xl animate-fade-up duration-300';
-		case DetailType.subtitle:
-			return 'text-xs font-light tracking-wide md:text-sm duration-300';
-		case DetailType.description:
-			return 'text-sm font-normal tracking-wide md:text-base animate-fade-in duration-300';
-	}
+const styles = {
+	title:
+		'font-sora text-4xl text-center font-bold tracking-wide md:text-5xl animate-fade-up duration-300',
+	subtitle: 'text-xs font-light tracking-wide md:text-sm duration-300',
+	description: 'text-sm font-normal tracking-wide md:text-base animate-fade-in duration-300',
 };
 ---
 
-<div
-	class="grid grid-cols-1 place-content-center place-items-center gap-5"
->
-	{details.map((detail) => <p class={getClass(detail.type)}>{detail.content}</p>)}
-
+<div class="grid grid-cols-1 place-content-center place-items-center gap-5">
+	<h1 class={styles.title}>Hi, I'm Carlos Díaz aka Linkmetal</h1>
+	<p class={styles.subtitle}>Software Developer</p>
+	<p class={styles.description}>Specialized on Frontend 🚀💻</p>
 </div>
