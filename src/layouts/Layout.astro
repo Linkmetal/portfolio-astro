@@ -20,6 +20,20 @@ const { title, siteName, siteDescription } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org/",
+				"@type": "Person",
+				"name": "Carlos Díaz",
+				"url": "https://linkmetal.dev",
+				"image": "https://www.linkmetal.dev/assets/img/me.webp",
+				"sameAs": [
+					"https://github.com/Linkmetal",
+					"https://www.linkedin.com/in/cardifal/"
+				],
+				"jobTitle": "Senior Frontend Developer"
+			}
+		</script>
 		<meta name="description" content={siteDescription} />
 		<meta
 			name="keywords"
