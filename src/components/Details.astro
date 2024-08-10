@@ -27,7 +27,7 @@ const details: {
 const getClass = (type: DetailType) => {
 	switch (type) {
 		case DetailType.title:
-			return 'font-sora text-4xl font-bold tracking-wide md:text-5xl animate-fade-up duration-300';
+			return 'font-sora text-4xl text-center font-bold tracking-wide md:text-5xl animate-fade-up duration-300';
 		case DetailType.subtitle:
 			return 'text-xs font-light tracking-wide md:text-sm duration-300';
 		case DetailType.description:
@@ -40,4 +40,5 @@ const getClass = (type: DetailType) => {
 	class="grid grid-cols-1 place-content-center place-items-center gap-5"
 >
 	{details.map((detail) => <p class={getClass(detail.type)}>{detail.content}</p>)}
+
 </div>
